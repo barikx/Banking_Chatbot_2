@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banking Chatbot - LOOMI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="bank-header">
+    <img src="/static/logo.png" alt="Bank Logo" class="bank-logo" />
+    <h1>Welcome to Golden Ore Bank</h1>
+  </header>
+
+  <main class="landing-main">
+    <section class="intro-section">
+      <h2>Meet LOOMI — Your 24×7 Banking Buddy</h2>
+      <p>LOOMI is your intelligent AI virtual assistant. Ask anything, anytime.</p>
+    </section>
+  </main>
+
+  <!-- Chatbot toggle button -->
+  <div class="chat-toggle" onclick="toggleChat()">
+    💬 Ask LOOMI
+  </div>
+
+  <!-- Chat container -->
+  <div class="chat-container" id="chatContainer">
+    <div class="chat-header">💬 LOOMI - Gen AI Banking Assistant</div>
+    <div class="chat-box" id="chatBox">
+      <div class="message bot">👋 Hi! I'm LOOMI. How can I help you today?</div>
+      
+      <div class="suggestion-title">Try asking:</div>
+      <ul class="chat-suggestions">
+        <li onclick="sendQuickQuestion('How to open a savings account?')">How to open a savings account?</li>
+        <li onclick="sendQuickQuestion('What is the interest rate on FD?')">What is the interest rate on FD?</li>
+        <li onclick="sendQuickQuestion('How to apply for a credit card?')">How to apply for a credit card?</li>
+        <li onclick="sendQuickQuestion('Where can I find my account number?')">Where can I find my account number?</li>
+      </ul>
+    </div>
+
+    <div class="input-row">
+      <input type="text" id="textInput" placeholder="Type your message here..." />
+      <button onclick="sendText()">Send</button>
+      <button onclick="startRecording()">🎤</button>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
